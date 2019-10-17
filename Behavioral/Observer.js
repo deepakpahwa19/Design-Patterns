@@ -42,8 +42,9 @@ const subs3 = new Subscriber('Subs3');
 
 
 const message = new Message();
+message.updateMessage('Miss you!'); // No message will be displayed because there is no subscriber
 message.subscribe(subs1);
 message.subscribe(subs2);
 
-message.updateMessage('Love you!');
+message.updateMessage('Love you!'); // Subs1 Love you! Subs2 Love you!
 
